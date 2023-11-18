@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(254,250,239);
+    margin: 0; 
+    height: 100vh;
+}
+
+.container{
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-card{
+    width: 30rem;
+}
+
+.container-footer{
+    border-top: 1px solid lightgrey;
+    margin-top: 20px;
+    padding-top: 15px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.answer-card:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.bg-success, .bg-danger {
+    color: white;
+}
