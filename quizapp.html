@@ -23,9 +23,22 @@
   </nav>
 
   <div class="container">
-    <div class="main-card card">
+    <div id="main-container" class="main-card card">
       <img src="./img/background-img.jpg" class="card-img-top" alt="Background of card">
-      <div class="card-body">
+
+      <div class="progress" role="progressbar" aria-label="Example with label" aria-valuemin="0" aria-valuemax="100">
+        <div id="progressBar" class="progress-bar" style="width: 5%">0%</div>
+      </div>
+
+      <div class="main-card card" style="display: none" id="endScreen">
+        <h2>Du hast es geschafft!</h2>
+        <span>Du hast <b id="correct-answers">XX</b> von <b id="sum-of-questions">XX</b> Fragen richtig beantwortet.</span>
+        <div>
+          <button onclick="restart()" type="button" class="btn btn-outline-secondary">Spiel wiederholen!</button>
+        </div>
+      </div>
+
+      <div class="card-body" id="questions-body">
         <h5 id="cardTitle" class="card-title">Frage</h5>
 
         <div class="card mb-2 answer-card" onclick="answer('answer_1')">
@@ -56,12 +69,13 @@
           <span>
             <b id="actual-question">1</b> von <b id="last-question">5</b> Fragen
           </span>
-          <button type="button" class="btn btn-secondary btn-sm">Nächste Frage</button>
+          <button id="next-question-btn" disabled type="button" onclick="showNextQuestion()" class="btn btn-primary btn-sm">Nächste Frage</button>
         </div>
 
       </div>
     </div>
   </div>
+ 
     
 
 </body>
